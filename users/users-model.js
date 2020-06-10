@@ -21,6 +21,8 @@ async function add(user) {
     return findByID(id);
 }
 
+
+
 function findByID(id) {
     return db("users")
     .where({ id })
