@@ -28,9 +28,9 @@ server.use(express.json());
 server.use(session(sessionConfig));
 
 
-server.use("/users", authenticator, usersRouter);
-server.use("/login", loginRouter);
-server.use("/auth", authRouter);
+server.use("/api/users", authenticator, usersRouter);
+server.use("/api/login", loginRouter);
+server.use("/api/register", authRouter);
 server.get("/", (req, res) => {
     res.send("<h1>Intro to Authentication Project<h1>");
 });
